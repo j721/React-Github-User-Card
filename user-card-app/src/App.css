@@ -1,21 +1,29 @@
-.App {
+.App{
+  background-color: #a6bfec;
   text-align: center;
 }
 
-
+body{
+  background-color: #a6bfec;
+}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+
+.UserList{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 10%;
+    height: 69vh;
+    margin-left: 11%;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 5.25rem;
 }
 
+img{
+  width: 30%;
+}
