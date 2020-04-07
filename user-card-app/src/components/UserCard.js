@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardImg, CardText, CardBody,CardTitle} from 'reactstrap';
+import "../App.css";
 
 function UserCard (props){
     console.log(props.login);

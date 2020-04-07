@@ -1,6 +1,7 @@
 .App{
   background-color: #a6bfec;
   text-align: center;
+  border: 0;
 }
 
 body{
@@ -13,7 +14,17 @@ body{
 
 .card{
   background-color: #a6bfec;
+  height: 0vh;
+  border: 0;
 }
+
+
+.card-img{
+  width: 43vw;
+  height: 40vh;
+  margin-top: 16%;
+}
+
 
 .styled-cards{
     display: flex;
@@ -22,6 +33,7 @@ body{
     margin-top: 4%;
     height: 75vh;
     margin-left: 21%;
+    background-color: #a6bfec;
     /* background-color: #fff; */
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 5.25rem;
