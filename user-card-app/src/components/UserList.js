@@ -13,23 +13,36 @@ class UserList extends React.Component{
 
 
     componentDidMount(){
+        //fetch user data
         axios.get("https://api.github.com/users/j721")
         .then(response=>{
             console.log(response.data,"data was received")
-            this.setState({
-                user: response.data
+
+                this.setState({
+                    user: response.data
+                })    
             })
-            
+        .catch(error=>{
+            console.log(error, 'user data not received')
+        })
+
+        //Fetch User's followers
+        axios.get("https://api.github.com/users/j721/followers")
+        .then(response=>{
+            console.log(response.data, 'followers data')
+            this.setState({
+                followers: response.data
+            })
         })
         .catch(error=>{
-            console.log(error, 'data not received')
+            console.log(error, 'followers data not received')
         })
     }
 
     render(){
         return(
-            <div>
-
+            <div className ="card">
+                 
             </div>
         )
     }
