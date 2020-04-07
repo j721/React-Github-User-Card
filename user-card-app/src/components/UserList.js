@@ -42,7 +42,17 @@ class UserList extends React.Component{
     render(){
         return(
             <div className ="card">
-                 
+
+                <div className ="userInfo">
+                    <h2>username:{this.state.user.login}</h2> 
+                    <img src ={this.state.user.avatar_url}></img>
+                </div>
+
+                <div className ="followersInfo">
+                    <h2>username:{this.state.followers.login}</h2>
+                    <img src ={this.state.followers.avatar_url}></img>
+                </div>
+
             </div>
         )
     }
