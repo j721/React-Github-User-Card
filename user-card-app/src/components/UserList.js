@@ -43,27 +43,27 @@ class UserList extends React.Component{
     render(){
         return(
             <div className ="card">
-
                 <div className ="userInfo">
-                    <h2>username:{this.state.user.login}</h2> 
-                    <h3>{this.state.user.html_url}</h3>
-                    <img src ={this.state.user.avatar_url} alt="avatar of github user"></img>
+                    {<UserCard
+                        login ={this.state.user.login}
+                        html_url={this.state.user.html_url}
+                        avatar_url ={this.state.user.avatar_url}
+                    />
+                    }
                 </div>
 
                 <div className ="followersInfo">
                    {this.state.followers.map(follower=>
-                       (<div className ="follower">
-                            <img src ={follower.avatar_url} alt ="profile of followers"></img>
-                            <h2>{follower.login}</h2>
-                            <h3>{follower.html_url}</h3>
-                       </div>)
-                       )}
-                </div>
-
+                      (<UserCard
+                            avatar_url ={follower.avatar_url} 
+                           login ={follower.login}
+                            html_url={follower.html_url}
+                            />
+                            ))}
+                    </div>
             </div>
-        )
+        );
     }
-
 }
 
 export default UserList; 
