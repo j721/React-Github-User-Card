@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import UserCard from './UserCard';
 import "../App.css";
 
 class UserList extends React.Component{
@@ -45,12 +46,16 @@ class UserList extends React.Component{
 
                 <div className ="userInfo">
                     <h2>username:{this.state.user.login}</h2> 
-                    <img src ={this.state.user.avatar_url}></img>
+                    <img src ={this.state.user.avatar_url} alt="avatar image of github user"></img>
                 </div>
 
                 <div className ="followersInfo">
-                    <h2>username:{this.state.followers.login}</h2>
-                    <img src ={this.state.followers.avatar_url}></img>
+                   {this.state.followers.map(follower=>
+                       (<div className ="follower">
+                            <img src ={follower.avatar_url} alt ="profile image of followers"></img>
+                            <h2>{follower.login}</h2>
+                       </div>)
+                       )}
                 </div>
 
             </div>
