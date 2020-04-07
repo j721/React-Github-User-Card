@@ -11,19 +11,19 @@ body{
   color: black;
 }
 
+.card{
+  background-color: #a6bfec;
+}
 
-.UserList{
+.styled-cards{
     display: flex;
     flex-direction: column;
-    width: 75%;
-    margin-top: 10%;
-    height: 69vh;
-    margin-left: 11%;
-    background-color: #fff;
+    width: 54%;
+    margin-top: 4%;
+    height: 75vh;
+    margin-left: 21%;
+    /* background-color: #fff; */
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 5.25rem;
 }
 
-img{
-  width: 30%;
-}
