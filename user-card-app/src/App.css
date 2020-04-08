@@ -1,4 +1,4 @@
-.App{
+/* .App{
   background-color: #a6bfec;
   text-align: center;
   border: 0;
@@ -13,9 +13,9 @@ body{
 }
 
 .card{
-  background-color: #a6bfec;
   height: 0vh;
-  border: 0;
+  border: 0px;
+  background-color: #a6bfec;
 }
 
 
@@ -30,12 +30,21 @@ body{
     display: flex;
     flex-direction: column;
     width: 54%;
-    margin-top: 4%;
+    margin-top: 3%;
     height: 75vh;
     margin-left: 21%;
     background-color: #a6bfec;
-    /* background-color: #fff; */
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 5.25rem;
+    padding: 1%;
 }
+ */
 
+
+ .App {
+  text-align: center;
+}
+.Header {
+  color: #443e3e;
+  text-shadow: 1px 1px 5px #fff;
+}

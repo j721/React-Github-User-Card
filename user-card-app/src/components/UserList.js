@@ -2,6 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import UserCard from './UserCard';
 import "../App.css";
+import styled from 'styled-components';
+
+const Wrapper =styled.div`
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+`;
 
 class UserList extends React.Component{
     constructor(){
@@ -42,7 +50,7 @@ class UserList extends React.Component{
 
     render(){
         return(
-            <div className ="card">
+            <Wrapper>
                 <div className ="userInfo">
                     {<UserCard
                         login ={this.state.user.login}
@@ -61,7 +69,7 @@ class UserList extends React.Component{
                             />
                             ))}
                     </div>
-            </div>
+         </Wrapper>
         );
     }
 }
