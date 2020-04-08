@@ -6,9 +6,9 @@ import styled from 'styled-components';
 
 const Wrapper =styled.div`
 display:flex;
-flex-direction: row;
+flex-direction: column;
 flex-wrap: wrap;
-justify-content: center;
+justify-content: center; 
 `;
 
 class UserList extends React.Component{

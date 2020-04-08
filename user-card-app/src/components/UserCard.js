@@ -4,13 +4,11 @@ import "../App.css";
 import styled from "styled-components";
 
 const StyledCard = styled.div`
-    // width:30%;
-    // width:32%;
-    // opacity: 0.9;
-    // background-color: #f5fbd48a;
+    width: 60%;
+    opacity: 0.9;
+    background-color: pink;
     border-radius: 0.2em;
-    background-color: pink; 
-    margin: 1%;
+    margin: 7% 23%;
     border: 3px solid black; 
     position: relative; 
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
