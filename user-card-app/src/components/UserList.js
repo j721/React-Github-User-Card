@@ -57,27 +57,34 @@ class UserList extends React.Component{
              userSearch: e.target.value   
         });
     }
-
-    //Fetch data for user typed in
-    componentDidUpdate(prevProps, prevState){
-        console.log("componentDidUpdate()");
-        if(this.state.userSearch === ""){
-              this.fetchUser(); 
-            }
-        }
-    
-
-    //Fetch user Searched
-    fetchUser = event =>{
-            // event.preventDefault();
+ 
+    //Fetch userFollowers Searched
+    fetchUserFollowers = event =>{
+        event.preventDefault();        
             axios.get (`https://api.github.com/users/${this.state.userSearch}/followers`)
-            // axios.get(`https://api.github.com/users/${this.state.userSearch}`)
             .then(response=>{
                 this.setState({followers:response.data})
                 console.log(this.state)
             });
         }
+    //fetch User
+        fetchUser = event =>{
+            event.prevenDefault();
+            axios.get(`https://api.github.com/users/${this.state.userSearch}`)
+            .then(response=>{
+                this.setState({user:response.data})
+                console.log(this.state, "userfollowers state")
+            })
+        }
 
+    //Fetch data for user typed in
+        componentDidUpdate(prevProps, prevState){
+            console.log("componentDidUpdate()");
+            if(this.state.userSearch === ""){
+                  this.fetchUserFollowers(); 
+                  this.fetchUser();
+                }
+            }
 
     render(){
         return(
