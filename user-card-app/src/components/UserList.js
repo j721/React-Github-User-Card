@@ -59,17 +59,17 @@ class UserList extends React.Component{
     }
  
     //Fetch userFollowers Searched
-    fetchUserFollowers = event =>{
-        event.preventDefault();        
+    fetchUserFollowers = e =>{
+        // e.preventDefault();        
             axios.get (`https://api.github.com/users/${this.state.userSearch}/followers`)
             .then(response=>{
                 this.setState({followers:response.data})
                 console.log(this.state)
             });
         }
-    //fetch User
+    
         fetchUser = event =>{
-            event.prevenDefault();
+            // event.prevenDefault();
             axios.get(`https://api.github.com/users/${this.state.userSearch}`)
             .then(response=>{
                 this.setState({user:response.data})
