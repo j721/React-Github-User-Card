@@ -21,7 +21,7 @@ class UserList extends React.Component{
     }
 
 
-componentDidMount(){
+ componentDidMount(){
         //fetch user data
         axios.get("https://api.github.com/users/j721")
         .then(response=>{
@@ -53,20 +53,26 @@ componentDidMount(){
 
     //userSearch
     handleChange = e =>{
-        e.preventDefault();
         this.setState({
              userSearch: e.target.value   
         });
     }
 
     //Fetch data for user typed in
+    componentDidUpdate(prevProps, prevState){
+        console.log("componentDidUpdate()");
+        if(this.state.userSearch === ""){
+              this.fetchUser(); 
+            }
+        }
+    
 
     //Fetch user Searched
-        fetchUser = event =>{
-            event.preventDefault();
+fetchUser = event =>{
+            // event.preventDefault();
             axios.get (`https://api.github.com/users/${this.state.userSearch}/followers`)
             .then(response=>{
-                this.setState({followers:response.data.message})
+                this.setState({followers:response.data})
                 console.log(this.state)
             });
         }
@@ -74,6 +80,17 @@ componentDidMount(){
 
     render(){
         return(
+            <div className ="container">
+            <div className ="form">
+                <h2>User Search</h2>
+                <input
+                type ="text"
+                value ={this.state.userSearch}
+                onChange ={this.handleChange}
+                />
+                <button onClick ={this.fetchUser}>Find User</button>
+            </div>
+
             <Wrapper>
                 <div className ="userInfo">
                     {<UserCard
@@ -94,6 +111,7 @@ componentDidMount(){
                             ))}
                     </div>
          </Wrapper>
+         </div>
         );
     }
 }
