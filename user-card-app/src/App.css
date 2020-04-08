@@ -1,54 +1,12 @@
-/* .App{
-  background-color: #a6bfec;
-  text-align: center;
-  border: 0;
-}
 
-body{
-  background-color: #a6bfec;
-}
-
-.App-header {
-  color: black;
-}
-
-.card{
-  height: 0vh;
-  border: 0px;
-  background-color: #a6bfec;
-}
-
-
-.card-img{
-  width: 43vw;
-  height: 40vh;
-  margin-top: 16%;
-}
-
-
-.styled-cards{
-    display: flex;
-    flex-direction: column;
-    width: 54%;
-    margin-top: 3%;
-    height: 75vh;
-    margin-left: 21%;
-    background-color: #a6bfec;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 5.25rem;
-    padding: 1%;
-}
- */
-
-
- .App {
+.App {
   text-align: center;
 }
-.Header {
+
+/* .App-Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
-}
+  opacity: 0.8;
+  margin-top: 3%;
+} */
 
-body{
-  background-color: #38abb726;
-}
