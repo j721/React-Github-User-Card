@@ -3,12 +3,9 @@
 } */
 
 body{
-  height: 100%;
-  width:100%;
   margin: 0;
   padding: 0;
- /* overflow: hidden; */
-  animation: color 12s ease infinite;  
+  /* animation: color 12s ease infinite;   */
  }
 
 h1 {
@@ -17,7 +14,7 @@ h1 {
 
 }
 
-@keyframes color{
+/* @keyframes color{
     0%{
       background: #b9a1dad4;
     }
@@ -34,4 +31,4 @@ h1 {
   100%{
     background: #b9a1dad4;
   }
-}
+} */

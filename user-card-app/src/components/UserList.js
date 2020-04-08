@@ -21,14 +21,15 @@ class UserList extends React.Component{
     }
 
 
-    componentDidMount(){
+componentDidMount(){
         //fetch user data
         axios.get("https://api.github.com/users/j721")
         .then(response=>{
             console.log(response.data,"data was received")
 
                 this.setState({
-                    user: response.data
+                    user: response.data,
+                    userSearch: ""
                 })    
             })
         .catch(error=>{
@@ -47,6 +48,29 @@ class UserList extends React.Component{
             console.log(error, 'followers data not received')
         })
     }
+
+//Attempting Stretch 
+
+    //userSearch
+    handleChange = e =>{
+        e.preventDefault();
+        this.setState({
+             userSearch: e.target.value   
+        });
+    }
+
+    //Fetch data for user typed in
+
+    //Fetch user Searched
+        fetchUser = event =>{
+            event.preventDefault();
+            axios.get (`https://api.github.com/users/${this.state.userSearch}/followers`)
+            .then(response=>{
+                this.setState({followers:response.data.message})
+                console.log(this.state)
+            });
+        }
+
 
     render(){
         return(

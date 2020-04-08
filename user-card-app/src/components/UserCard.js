@@ -21,14 +21,11 @@ function UserCard (props){
     return(
         <StyledCard>
             <h3>{props.id}</h3>
-                <img  src ={props.avatar_url} alt ={props.id}></img>
-                
+                <img  src ={props.avatar_url} alt ={props.id}></img>    
                     <h4>Github Handle</h4>
                     <p>{props.login}</p>
-                    <p>{props.html_url}</p>
-               
-
-                </StyledCard>
+                    <p>{props.html_url}</p>            
+        </StyledCard>
 
     )
 }
