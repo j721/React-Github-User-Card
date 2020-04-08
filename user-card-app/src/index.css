@@ -1,0 +1,34 @@
+/* body {
+  background: linear-gradient(to right, #50869c, #ef32d95e);
+} */
+
+body{
+  margin: 0;
+  padding: 0;
+  animation: color 12s ease infinite;  
+ }
+
+h1 {
+  color: #443e3e;
+  text-shadow: 1px 1px 5px #fff;
+
+}
+
+@keyframes color{
+    0%{
+      background: #b9a1dad4;
+    }
+    25%{
+      background: #83b3bbb8;;
+    }
+    50%{
+    background: #ff980045;
+  }
+  75%{
+    background: white;
+  }
+
+  100%{
+    background: #b9a1dad4;
+  }
+}
