@@ -7,9 +7,9 @@ body{
   width:100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  animation: color 15s ease infinite; 
-}
+ /* overflow: hidden; */
+  animation: color 12s ease infinite;  
+ }
 
 h1 {
   color: #443e3e;

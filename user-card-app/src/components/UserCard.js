@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyledCard = styled.div`
     width: 60%;
-    opacity: 0.9;
+    opacity: 0.8;
     background-color: pink;
     border-radius: 1.2em;
     margin: 6% 23%;
