@@ -6,7 +6,7 @@ const StyledCard = styled.div`
     width: 60%;
     opacity: 0.9;
     background-color: pink;
-    border-radius: 0.2em;
+    border-radius: 1.2em;
     margin: 6% 23%;
     border: 3px solid black; 
     position: relative; 
